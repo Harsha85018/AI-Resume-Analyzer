@@ -1,71 +1,54 @@
 # AI Resume Analyzer Pro
 
-AI Resume Analyzer Pro is an intelligent resume screening and candidate evaluation platform that helps job seekers optimize their resumes while providing recruiters with actionable hiring insights. The system leverages Natural Language Processing (NLP), Machine Learning, ATS-style scoring, semantic similarity analysis, and recruiter analytics to evaluate resumes against job descriptions.
+An AI-powered Resume Analyzer built using NLP, Semantic Similarity, ATS Scoring, Feature Engineering, and Recruiter-style Analytics.
+
+## Overview
+
+AI Resume Analyzer Pro helps job seekers evaluate resumes against job descriptions using ATS-style scoring techniques. The system extracts skills, predicts career domains, measures semantic similarity, identifies missing keywords, provides personalized recommendations, and visualizes candidate analytics.
 
 ---
 
 ## Features
 
-### Resume Processing
-- Upload resumes in PDF format
-- Extract raw text from resumes
-- NLP-based text preprocessing and cleaning
-- Automatic contact information extraction
+### Resume Analysis
+- PDF Resume Parsing
+- Skill Extraction
+- Contact Information Extraction
+- Resume Section Detection
+- Career Field Prediction
+- Resume Quality Assessment
 
-### Resume Intelligence
-- Skill extraction from resumes
-- Resume section identification
-- Career field prediction
-- Candidate classification
-- ATS-style resume scoring
-- Resume quality evaluation
+### ATS Scoring
+- Keyword Match Score
+- Semantic Similarity Score
+- Skill Match Score
+- Contact Information Score
+- Action Verb Score
+- Final ATS Score Calculation
 
-### Job Matching
-- Job description analysis
-- Semantic similarity matching
-- Resume-to-job compatibility scoring
-- Skill gap identification
-- Job match percentage calculation
+### Recommendations
+- Missing Keyword Detection
+- Recommended Skills
+- Resume Improvement Suggestions
+- Course Recommendations
+- Candidate Classification
 
-### Career Recommendations
-- Recommended technical skills
-- Career field suggestions
-- Learning path recommendations
-- Suggested certification courses
+### Analytics Dashboard
+- Resume Analysis Tracking
+- ATS Score Distribution
+- Predicted Field Distribution
+- Candidate Classification Distribution
+- Historical Resume Records
 
-### Recruiter Analytics Dashboard
-- Resume analysis history
-- Candidate distribution analytics
-- Resume score analytics
-- Predicted field visualization
-- Candidate classification insights
-- Feedback tracking system
-
-### User Feedback System
-- Collect user feedback
-- Track user experience ratings
-- Store recruiter and candidate feedback
-- Dashboard analytics for feedback trends
+### Database Integration
+- SQLite Storage
+- Resume History Management
+- Feedback Storage
+- Analytics Reporting
 
 ---
 
-## Screenshots
-
-### User Dashboard
-- Resume upload
-- ATS scoring
-- Job matching
-- Candidate insights
-
-### Admin Dashboard
-- Analytics dashboard
-- Candidate distribution charts
-- Resume scoring insights
-- Feedback analytics
-
----
-
-## Technology Stack
+## Tech Stack
 
 ### Frontend
 - Streamlit
@@ -78,243 +61,149 @@ AI Resume Analyzer Pro is an intelligent resume screening and candidate evaluati
 - TF-IDF Vectorization
 - Cosine Similarity
 - Feature Engineering
-- K-Means Clustering
 
 ### Data Processing
 - Pandas
 - NumPy
 
-### Database
-- SQLite
-
 ### Visualization
 - Plotly
 - Plotly Express
 
-### Resume Parsing
-- PyPDF2
+### Database
+- SQLite
 
 ---
 
-## Project Architecture
-
-```text
-AI-Resume-Analyzer/
-│
-├── app.py
-│
-├── data/
-│   ├── field_config.py
-│   ├── courses.py
-│   └── skills.py
-│
-├── src/
-│   ├── parser.py
-│   ├── preprocess.py
-│   ├── extractor.py
-│   ├── predictor.py
-│   ├── scorer.py
-│   ├── recommender.py
-│   ├── database.py
-│   └── analytics.py
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
-
----
-
-## Machine Learning Pipeline
-
-### Step 1: Resume Parsing
-- Extract text from PDF resumes
-- Convert resume into machine-readable format
-
-### Step 2: NLP Preprocessing
-- Lowercasing
-- Tokenization
-- Stopword removal
-- Text normalization
-
-### Step 3: Information Extraction
-- Email extraction
-- Phone number extraction
-- Skill extraction
-- Section detection
-
-### Step 4: Feature Engineering
-- Resume feature creation
-- Skill-based profiling
-- Section completeness analysis
-
-### Step 5: Semantic Similarity
-- TF-IDF vectorization
-- Resume embedding generation
-- Job description embedding generation
-- Cosine similarity calculation
-
-### Step 6: ATS Resume Scoring
-Evaluation factors include:
-
-- Skill coverage
-- Resume completeness
-- Project presence
-- Experience section
-- Education section
-- Certifications section
-- Job description alignment
-
-### Step 7: Career Field Prediction
-Fields supported:
-
-- Data Science
-- Machine Learning
-- Artificial Intelligence
-- Software Engineering
-- Web Development
-- Backend Development
-- Frontend Development
-- Cloud Computing
-- DevOps
-- Cybersecurity
-- Business Intelligence
-- Database Engineering
-
-### Step 8: Candidate Classification
-
-Categories:
-
-- Excellent Fit
-- Strong Fit
-- Moderate Fit
-- Weak Fit
-- Poor Fit
-
----
-
-## Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/Harsha85018/AI-Resume-Analyzer.git
-cd AI-Resume-Analyzer
-```
-
-### Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### Activate Environment
-
-Mac/Linux:
-
-```bash
-source venv/bin/activate
-```
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Run Application
-
-```bash
-streamlit run app.py
-```
-
-Application launches at:
-
-```text
-http://localhost:8501
-```
-
----
-
-## Admin Dashboard
-
-The Admin Dashboard provides:
-
-### Resume Analytics
-- Total resume analyses
-- Average resume score
-- Candidate classification distribution
-- Predicted field distribution
-
-### Candidate Insights
-- Candidate records
-- Resume metadata
-- Skill profiles
-- Career recommendations
-
-### Feedback Analytics
-- User ratings
-- User comments
-- Feedback summaries
-
----
-
-## Sample Workflow
+## Project Workflow
 
 1. Upload Resume PDF
-2. Paste Job Description
-3. Click Analyze Resume
-4. View:
-   - ATS Score
-   - Job Match Score
-   - Candidate Classification
-   - Career Field Prediction
-   - Recommended Skills
-   - Recommended Courses
-5. Review Recruiter Analytics
+2. Extract Resume Text
+3. Extract Skills and Resume Sections
+4. Predict Candidate Career Domain
+5. Compare Resume with Job Description
+6. Calculate ATS Metrics
+7. Generate Recommendations
+8. Classify Candidate Fit
+9. Save Results to Database
+10. Display Analytics Dashboard
+
+---
+
+# Project Screenshots
+
+## 🏠 Home Page
+
+Upload a resume and provide a job description to start ATS evaluation.
+
+![Home Page](screenshots/home_page.png)
+
+---
+
+## 📊 Analysis Overview
+
+Displays candidate information, predicted field, ATS score, semantic match score, resume quality score, and candidate classification.
+
+![Analysis Overview](screenshots/analysis_overview.png)
+
+---
+
+## 🎯 ATS Breakdown
+
+Detailed ATS evaluation including:
+
+- Keyword Match
+- Skill Match
+- Action Verb Score
+- Contact Score
+- Semantic Similarity Score
+- Resume Quality Score
+- Missing Keywords
+
+![ATS Breakdown](screenshots/ats_breakdown.png)
+
+---
+
+## 💡 Resume Feedback & Recommendations
+
+Provides recruiter-style suggestions, recommended skills, recommended courses, and resume improvement insights.
+
+![Resume Recommendations](screenshots/recommendations_feedback.png)
+
+---
+
+## 🛠️ Admin Dashboard
+
+Centralized dashboard displaying all analyzed resumes, candidate information, ATS scores, and stored analysis records.
+
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+---
+
+## 📈 Analytics Dashboard
+
+Interactive analytics showing:
+
+- Predicted Field Distribution
+- Candidate Classification Distribution
+- ATS Score Distribution
+- Resume Statistics
+
+![Analytics Dashboard](screenshots/admin_analytics.png)
+
+---
+
+## Sample Predictions
+
+The system can identify multiple career domains including:
+
+- Data Science
+- Machine Learning Engineering
+- Data Engineering
+- Software Development
+- Full Stack Development
+- Cloud / DevOps
+- Database / Backend
+- Business / Data Analytics
+- General Software
 
 ---
 
 ## Future Enhancements
 
-### Planned Improvements
-
-- Sentence Transformers Embeddings
-- BERT-based Resume Matching
-- OpenAI-powered Resume Feedback
+- LLM-Powered Resume Feedback
 - Resume Ranking System
-- Multiple Resume Comparison
-- Recruiter Authentication
-- PDF Report Generation
-- Cloud Deployment
-- Docker Support
-- REST API Integration
-- Resume Keyword Optimization
-- LLM-powered Career Recommendations
+- Multi-Resume Comparison
+- Job Recommendation Engine
+- Recruiter Portal
+- Cloud Deployment (AWS/GCP/Azure)
+- Real-Time Job Matching
 
 ---
 
-## Resume Highlights
+## Installation
 
-### Key Features Demonstrated
+```bash
+git clone https://github.com/Harsha85018/AI-Resume-Analyzer.git
 
-- Natural Language Processing
-- Machine Learning
-- Semantic Search
-- ATS Scoring
-- Feature Engineering
-- Data Visualization
-- Database Management
-- Dashboard Development
-- End-to-End ML Application Development
+cd AI-Resume-Analyzer
+
+python -m venv venv
+
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
@@ -322,15 +211,13 @@ The Admin Dashboard provides:
 
 **Harshavardhan Reddy Kaditham**
 
-Master of Science in Data Science  
+MS Data Science  
 Indiana University Bloomington
 
 GitHub: https://github.com/Harsha85018
-
-LinkedIn: https://linkedin.com/in/harsha-kaditham
 
 ---
 
 ## License
 
-This project is intended for educational, research, and portfolio purposes.
+This project is developed for educational, research, and portfolio purposes.
